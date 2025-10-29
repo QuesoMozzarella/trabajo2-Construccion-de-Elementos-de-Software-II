@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>vista 1</title>
+</head>
+<body>
+<h1>PUNTO 2</h1>
+<h2>NPCs desde Stack (todos los que hay)</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Nombre</th>
+        <th>Raza</th>
+        <th>Rol</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="npc : ${listaStack}">
+        <td th:text="${npc.nombre}"></td>
+        <td th:text="${npc.raza}"></td>
+        <td th:text="${npc.rol}"></td>
+    </tr>
+    </tbody>
+</table>
+
+<h2>NPCs del Maestro (solo 5)</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Nombre</th>
+        <th>Raza</th>
+        <th>Rol</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="npc : ${listaDeque}">
+        <td th:text="${npc.nombre}"></td>
+        <td th:text="${npc.raza}"></td>
+        <td th:text="${npc.rol}"></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Vista 2</title>
+</head>
+<body>
+<h1>PUNTO 3</h1>
+<h2>Mostramos los npc con rol = a mago</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Nombre</th>
+        <th>Rol</th>
+        <th>Raza</th>
+        <th>Puntos</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="npc : ${magos}">
+        <td th:text="${npc.nombre}"> </td>
+        <td th:text="${npc.rol}"> </td>
+        <td th:text="${npc.raza}"> </td>
+        <td th:text="${npc.getPuntos()}"> </td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
